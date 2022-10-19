@@ -26,10 +26,10 @@ form{
     background-color: red;
     text-align: center;
 }
-h3.data-success{
+.data-success{
     background-color: aqua;
 }
 
-h3.data-wrong{
+.data-wrong{
     background-color: yellow;
 }

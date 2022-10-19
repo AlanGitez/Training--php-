@@ -14,14 +14,4 @@
         return true;
     }
 
-
-
-    function dataAlert($content){
-        return
-        ob_start()
-            ?>
-            <h3 class="data-success"> <?php $content ?> </h3>
-            <?php
-        return ob_end_clean();
-    }
 ?>

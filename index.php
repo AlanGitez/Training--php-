@@ -36,7 +36,7 @@
 
     <?php
         include("register.php");
-        phpinfo();
+        
     ?>
 </body>
 </html>
