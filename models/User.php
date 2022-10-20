@@ -30,7 +30,14 @@
         
 
         public function get(){
-
+            $getAllQuery = "SELECT * FROM Users";
+            if(!$this->db) return false;
+    
+            $users = mysqli_query($this->db, $getAllQuery);
+            if(!$users)return false;
+            return $users;
+            
+    
         }
 
         function isValidData($mail, $password){

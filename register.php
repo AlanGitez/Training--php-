@@ -3,6 +3,10 @@
     include("utils.php");
     include("models/index.php");
 
+    echo "<hr>" ;
+    var_dump($_POST);
+    echo "<hr>"; 
+
     $name = trim($_POST['name']);
     $lastname = trim($_POST['lastname']);
     $email = trim($_POST['mail']);
@@ -17,6 +21,7 @@
         echo "Name: " . $newUser->name . "<br> Lastname: " . $newUser->lastname . " <br> Email: " . $newUser->email . "<br> Password: " . $newUser->password;
 
         $newUser->insert();
+        $newUser->get();
     }
     
 ?>
