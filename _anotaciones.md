@@ -1,0 +1,4 @@
+# PENDIENTES
+
+* traits
+* namespaces

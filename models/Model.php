@@ -8,6 +8,9 @@
 
 
     public function register($table, $data){
+        echo "<br>";
+        var_dump($data);
+        echo "<br>";
         $registerQuery = "INSERT INTO $table VALUES ($data)";
 
         return $this->db->query($registerQuery);
@@ -15,15 +18,20 @@
     
 
     public function getAll($table){
-        $getAllQuery = "SELECT * FROM $table";
+
+        $getAllQuery = "SELECT id, name, lastname, email FROM $table";
         if(!$this->db) return false;
 
         $users = $this->db->query($getAllQuery);
         if(!$users)return false;
-        return mysqli_fetch_array($users, MYSQLI_ASSOC);
+        echo("Elementos totales en la db: " . $users->num_rows . "<br>");
+
+        return $users;
         
 
     }
+
+
 
     function isValidData($mail, $password){
     
@@ -39,9 +47,13 @@
         return true;
     }
 
+    public function getStatusDB(){
+        $this->db ? true : false;
+    }
+
     public function __destruct(){
 
-        if($this->success){
+        if($this->db){
             ?>
             <h3 class="data-wrong"> has been registered SUCCESSFULLY</h3> 
            <?php

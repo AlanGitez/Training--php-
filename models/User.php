@@ -54,8 +54,7 @@
             return true;
         }
 
-        public function __destruct()
-        {
+        public function __destruct(){
             if($this->success){
                 ?>
                 <h3 class="data-wrong"> has been registered SUCCESSFULLY</h3> 
@@ -63,6 +62,7 @@
 
             }else {
                 ?>
+                <h3>soy yo</h3>
                 <h3 class="data-wrong"> Ups, something went wrong</h3>
                <?php
 
