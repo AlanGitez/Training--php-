@@ -1,0 +1,31 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.status-ok{
+    width: 100%;
+    background-color: green;
+    text-align: center;
+}
+
+.status-off{
+    width: 100%;
+    background-color: red;
+    text-align: center;
+}
+.data-success{
+    background-color: aqua;
+}
+
+.data-wrong{
+    background-color: yellow;
+}
