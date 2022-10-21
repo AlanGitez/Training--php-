@@ -1,7 +1,7 @@
 <?php
     require_once("models/index.php");
     require_once("utils.php");
-    
+
     class Controller{
         private $db;
         public function __construct(){

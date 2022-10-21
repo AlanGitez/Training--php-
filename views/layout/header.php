@@ -10,7 +10,7 @@
 </head>
 <body>
 <?php 
-    if(!$status) {
+    if($status->connect_errno) {
         ?>
         <a href="index.php" class="status-off"><h1 >Connection OFF</h1></a>
         <?php
