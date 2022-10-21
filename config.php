@@ -1,4 +1,4 @@
 <?php 
-    define("urlsite", "http://http://alanpruebasphp.com/register");
+    define("urlsite", "mispruebasphp.com/index.php");
 
 ?>

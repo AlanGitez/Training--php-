@@ -1,7 +1,7 @@
 
-<div class="form-container">
+<div class="f">
     <h3>Register</h3>
-    <form method="post">
+    <form method="post" class="border">
         <input 
             type="text" 
             name="name" 
@@ -25,9 +25,5 @@
 </div>
 
 <?php 
-    if($_POST['register']){
-        echo "<br>";
-        echo "Me hiciste click rey";
-        echo "<br>";
-    }
+
 ?>

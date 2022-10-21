@@ -1,17 +1,21 @@
 <?php
-require("views/index.php");
-// require("models/index.php");
+// require_once("db.php");
+require_once("config.php");
+require_once("controllers/index.php");
 
-// $model = new Model();
+$Controller = new Controller();
+$Controller->global();
+$Controller->index();
 
+$request = $_GET['action'];
+if(isset($request)):
+    if(method_exists("Controller", $request)):
+        $Controller->{$request}();
+    endif;
+else:
+    $Controller->index();
+endif;
 
-// if($_POST['register']){
-//     echo "Apretaste el boton";
-//     $data = $_POST;
-
-//     $model->register("Users", $data);
-    
-
-// }
+require_once("views/layout/footer.php");
 
 ?>

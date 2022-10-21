@@ -1,7 +1,10 @@
-<?php
+<?php 
+    function addKeyAndValue(&$array, $key, $value){
+        return $array[$key] = $value;
+    }
 
     function isValidData($mail, $password){
-        
+    
         if(!$mail || !$password) /* throw new Error("Need 1 string to work") */ return false;
 
         if(!strpos($mail, ".com") 
@@ -13,5 +16,4 @@
         
         return true;
     }
-
 ?>

@@ -1,45 +1,54 @@
-<?php
-    require("models/index.php");
-    $model = new Model();
-    $rows = $model->getAll("Users");
-    $assocArray = mysqli_fetch_all($rows, MYSQLI_ASSOC);
-    
 
-?>
 
-    
-
-<table class="table">
-  <thead>
-    <tr>
-
+<div class="container border shadow">
     <?php
-        foreach($assocArray[0] as $key => $value){
-            ?>
-                <th><?php echo $key; ?></th> 
-            <?php   
-        }
-        ?>
-
-    </tr>
-  </thead>
-  <tbody>
-    <?php 
-
-    foreach($assocArray as $row){ 
-        ?>
+        require_once("views/layout/panel.php");
+    ?>
+    <table class="table">
+    <thead>
         <tr>
-            <?php 
-                foreach($row as $col){
+
+        <?php
+                foreach($users[0] as $key => $value){
                     ?>
-                        <td> <?php echo $col; ?></td>
-                    <?php
+                        <th><?php echo $key; ?></th> 
+                    <?php   
                 }
             ?>
+            <th>EDIT</th>
+            <th>DELETE</th>
         </tr>
-        <?php
-    }
-        
-    ?>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+        <?php 
+            
+
+            foreach($users as $user){ 
+                ?>
+                <tr>
+                    <?php 
+                        foreach($user as $col){
+                            ?>
+                                <td> <?php echo $col; ?></td>
+                            <?php
+                        }
+                    ?>
+                  <td>
+                        <a 
+                        href='index.php?action=delete' 
+                        class='btn'><img href='/assets/images/trash.png' alt=''></a></td>
+                        <td>
+                        <a 
+                        href='index.php?action=update' 
+                        class='btn'><img href='/assets/images/edit.png' alt=''></a></td>
+                </tr>
+                <?php
+            }            
+        ?>
+    </tbody>
+    </table>
+</div>
+<?php 
+
+require_once("views/layout/footer.php");
+?>

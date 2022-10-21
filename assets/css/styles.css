@@ -1,0 +1,58 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+}
+img{
+    height: 100%;
+    width: 100%;
+}
+.container{
+    overflow-y:scroll;
+    max-height: 45vh;
+    width: 70%;
+}
+.form-container{
+    margin-top: 40px !important;
+}
+.panel{
+    height: 40px;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.btn{
+    background-color: grey !important;
+    border-radius: 0px !important   ;
+}
+a.status-ok, a.status-off{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.status-ok{
+    background-color: green;
+
+}
+
+.status-off{
+    width: 100%;
+    background-color: red;
+    text-align: center;
+}
+.data-success{
+    background-color: aqua;
+}
+
+.data-wrong{
+    background-color: yellow;
+}
