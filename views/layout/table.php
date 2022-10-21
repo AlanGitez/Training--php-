@@ -1,10 +1,11 @@
 
-
-<div class="container border shadow">
-    <?php
+ <?php
         require_once("views/layout/panel.php");
     ?>
-    <table class="table">
+<div class="container border shadow">
+   
+    <div class="my-table">
+    <table class="table" >
     <thead>
         <tr>
 
@@ -47,6 +48,7 @@
         ?>
     </tbody>
     </table>
+    </div>
 </div>
 <?php 
 

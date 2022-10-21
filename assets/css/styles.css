@@ -9,13 +9,15 @@ img{
     width: 100%;
 }
 .container{
-    overflow-y:scroll;
+    overflow-y: scroll;
     max-height: 45vh;
     width: 70%;
 }
+¡
 .form-container{
     margin-top: 40px !important;
 }
+
 .panel{
     height: 40px;
     width: 70%;
@@ -23,6 +25,14 @@ img{
     justify-content: space-between;
     align-items: flex-end;
 
+}
+
+.count{
+    /* border: 1px solid green; */
+    background-color: yellowgreen;
+    height: 30px;
+    width: 30px;
+    text-align: center;
 }
 form{
     display: flex;
